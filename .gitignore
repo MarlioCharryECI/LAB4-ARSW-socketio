@@ -137,3 +137,14 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# IDEs
+/.idea/
+/*.iml
+*.iml
+*.ipr
+*.iws
+/.classpath
+/.project
+/.settings/
+/.vscode/

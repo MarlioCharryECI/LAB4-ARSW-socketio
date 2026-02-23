@@ -106,8 +106,8 @@ En el **frontend (Blueprints P4)**:
 
 1. Crea `.env.local`:
    ```
-   VITE_API_BASE=http://localhost:8080   # si usas backend STOMP para REST
-   VITE_IO_BASE=http://localhost:3001    # este backend Socket.IO
+   VITE_API_BASE=http://localhost:8080   # backend CRUD para REST
+   VITE_IO_BASE=http://localhost:3001    # backend Socket.IO para tiempo real
    ```
 2. Levanta el front:
    ```bash
@@ -131,18 +131,6 @@ En el **frontend (Blueprints P4)**:
   }
 }
 ```
-
----
-
-## 🔐 CORS y Seguridad
-- En desarrollo: `cors({ origin: '*' })` para simplificar.
-- En producción: **restringe orígenes**.
-  ```js
-  const allowed = ['https://tu-frontend.com'];
-  const io = new Server(server, { cors: { origin: allowed }});
-  ```
-- Valida payloads (zod/joi) y añade autenticación/autorización (p. ej. JWT por sala).
-
 ---
 
 ## 🩺 Troubleshooting
@@ -167,5 +155,10 @@ En el **frontend (Blueprints P4)**:
 - [ ] `draw-event` → broadcast `blueprint-update` a la sala.  
 - [ ] Front refleja el trazo en **< 1s** en 2+ pestañas.  
 - [ ] Domento de laboratorio donde explica **setup** e **integración** con el front.
+
+---
+
+## 👥 Autores
+- **Marlio Jose Charry Espitia**
 
 ---
